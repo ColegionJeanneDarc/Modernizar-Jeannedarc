@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ubuntu';
+}
+body{
+    background-color: rgb(128, 200, 240);
+    background-size: cover; 
+    font-family: 'diplomata';
+}
+
+/* menu */
+
+
+header{
+    width: 100%;
+    height: 80px;
+    margin-top: 80px;
+    position: fixed;
+    z-index: 1;
+    padding: 40px;
+}
+.contenido {
+    margin: auto;
+    text-align: center;
+}
+
+
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+.container__menu{
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu{
+    display: flex;
+    align-items:center
+}
+
+.menu ul{
+    display: flex;
+}
+
+.menu ul li{
+    list-style: none;
+    margin-left: 36px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+
+#selected{
+    background: #165da0;
+    padding: 10px 40px;
+    border-radius: 50px;
+}
+
+
+@media screen and (max-width: 720px){
+
+    .menu nav{
+        position: fixed;
+        right: -250px;
+        background: rgb(226, 195, 195);
+        width: 250px;
+        height: 100vh;
+    }
+
+    .menu #btn_menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background: rgba(13, 78, 255, 0.1);
+        font-size: 24px;
+        border-radius: 50px;
+ 
+
+    }
+
+}
+
+
+/* MENU HORIZONTAL */
+
+nav{
+    max-width: 900px;
+    margin: auto;
+    background-color: rgb(33, 114, 219);
+    font-size: 20px;
+    margin-top: 50px;
+}
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Open Sans';
+}
+
+.menu-horizontal > li > a {
+    display: block;
+    padding: 15px 20px;
+    color: rgb(191, 217, 239);
+    text-decoration: none;
+}
+.menu-horizontal  > li:hover{
+    background-color: rgb(25, 61, 190);
+}
+.menu-vertical{
+    position: absolute;
+    z-index: 100;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(1, 12, 14, 0.5);
+}
+.menu-horizontal > li:hover  .menu-vertical{
+    display: block;
+}
+.menu-vertical > li:hover{
+    background-color: rgb(82, 118, 238);
+}   
+.menu-vertical li a{
+    display: block;
+    color: rgb(235, 230, 222);
+    padding: 15px 15px 15px 20px;
+    text-decoration: none;
+} 
+
+/* IMAGENES */
+
+.logoimagen{
+    width: 20%;
+    margin-top: -30px;
+    margin-left: 10px;
+    position: absolute;
+} 
+
+.logoimagen2{
+    width: 11%;
+    margin-top: -29px;
+    margin-left: 90%;
+    position: absolute;
+} 
+
+.foto1{
+    width: 2000px;
+    height: 580px;
+    margin-top: 140px;
+    margin-left: 480px;
+}
+
+/* LOGO PESTAÑA */
+
+.logo {
+   display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.logo img {
+    margin-left: -700px;
+    width: 130px;
+    height: 145px;
+}
+
+.title-logo {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+
+}
+
+.subtitle-logo {
+    font-size: 15px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 700;
+}
+
+.nav {
+    display: flex;
+    margin-top: 15px;
+    margin-left: 500px;
+    font-size: 25px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+}
+
+.link {
+    margin-left: 20px;
+}    
+
+.text {
+    font-size: 15px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+}
+
+/* Imagenes inicio y slide */
+
+        @keyframes slide {
+            0% { transform: translateX(0);}
+            20% { transform: translateX(0); }
+        
+            25% { transform: translateX(-100%); }
+            45% { transform: translateX(-100%); }
+        
+            50% { transform: translateX(-200%); }
+            70% { transform: translateX(-200%); }
+        
+            75% { transform: translateX(-300%); }
+            100% { transform: translateX(-300%); }
+         }
+        
+        
+        * { box-sizing: border-box; }
+        
+        html { scroll-behavior: smooth; }
+        
+        .wrapper {
+            max-width: 100%;
+            margin-left: 31%;
+
+        }
+        
+        .slides {
+            position: static;
+            display: flex;
+            overflow: hidden;
+        }
+        
+        .slide {
+            width: 100vw;
+            flex-shrink: 0;
+            animation-name: slide;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+        }
+        
+        
+        .slide img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        
+        .slide a {
+            width: 100%;
+            display: inline-block;
+            position: relative;
+        }
+    
+        
+        .slide:target {
+            animation-name: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 50;
+        }
+        
+        
+        /* @media only screen and (min-width: 1200px) {
+            .slide {
+                width: 1200px;
+            }
+        
+            .caption {
+                font-size: 96px;
+                bottom: 96px;
+                right: 50px;
+            }
+        } */
+
+
+        .Ultimas-Noticias{
+            background-color: #1d7aad;
+        }
+
+        .info-colegio {
+            font-size: 15px;
+            font-family: 'Kanit', sans-serif;
+            font-weight: 700;
+            margin-left: 750px;
+            line-height: 14px;
+        }
+
+        .info-colegio2{
+            font-size: 15px;
+            font-family: 'Kanit', sans-serif;
+            font-weight: 700;
+            margin-left: 690px;
+            line-height: 14px;
+
+        }
+
+        /* flip card */
+
+        .flipCard {
+            background-color: #ffffff;
+            width: 0px;
+            height: 325px;
+            margin-top: 50px;
+            margin-left: 50%;
+          }
+
+
+          .info-juana{
+            background-color: #34aded;
+
+        }
+        .texto-juana{
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+        .info-juana2{
+            background-color: #34aded;
+        }
+
+        .foto-01{
+            width: 100px;
+            height: 580px;
+            margin-top: 140px;
+            margin-left: 480px;
+        }
+
+        .barra-color1{
+            background-color: #34aded;
+        }
+
+        /* galeria de imagenes */
+
+        .Galeria{
+            width: 100px;
+            height: 580px;
+        }
+
+        .texto-juana{
+            width: 100%;
+            height: auto;
+            position: relative;
+            z-index: -1;
+            margin-top: -319px;
+            margin-left: 100px;
+
+        }
+
+        .juanaimg{
+            width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+
+
+        .barra-cabeza{
+            background-color: #34aded;
+        }
+
+
+
+.container{
+    width: 75vw;
+    max-width: 1200px;
+    min-width: 320px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+        
+.container .card{
+    width: 100%;
+    height: 40%;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    background-color: #66b5d4; 
+
+}
+        
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.7);
+}
+        
+/* .container .card img{
+    width: 60%;
+    height: auto;
+} */
+        
+/* .container .card h4{
+    font-weight: 600;
+}
+        
+.container .card p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 360;
+}
+        
+.container .card a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+}
+
+.column {
+    width: 100%
+} */
+
+
+
+/* haciendo la pag responsive */
+
+@media screen and (max-width:1200px){
+    header{
+        padding: 40px;
+
+    }
+}
+
+@media screen and (max-width:720px){
+    .menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #ffffff;
+        width: 250px;
+        height: 100vh;
+        padding: 40px;
+    }
+
+    .menu ul{    box-shadow: 0px 3px 5px  rgba(15, 15, 15, .5);
+        margin-top: 30px;
+        margin-left: 0;
+
+    }
+    .menu ul li a{
+        color: green;
+    }
+
+}
+
+img {
+    width: 100%;
+    max-width: 60%;
+    border-radius: 15px;
+}
+
+.ramon{
+    width: 100%;
+    height: auto;
+}
+
+
